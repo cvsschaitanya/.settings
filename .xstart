@@ -1,3 +1,4 @@
+# __#__~/.xstart__#__
 
 TTY=`tty`
 if [ -z "${DISPLAY}" -a "$TTY" = "/dev/tty1" ];
