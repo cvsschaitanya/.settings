@@ -5,7 +5,7 @@ getTarget() {
     eval echo "$header"
 }
 
-for set in `cat settings`
+for set in `ls theSettings/*`
 do
     target=`getTarget $set`
     
