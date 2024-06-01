@@ -1,0 +1,7 @@
+
+TTY=`tty`
+if [ -z "${DISPLAY}" -a "$TTY" = "/dev/tty1" ];
+then
+	echo "Starting X"
+	exec startx
+fi
