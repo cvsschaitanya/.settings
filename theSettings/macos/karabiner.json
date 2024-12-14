@@ -166,6 +166,22 @@
                                 "modifiers": ["left_control"]
                             }],
                             "type": "basic"
+                        }, {
+                            "from": {
+                                "key_code": "tab",
+                                "modifiers": {
+                                    "mandatory": [
+                                        "left_command", "shift"
+                                    ]
+                                }
+                            },
+                            "to": [{
+                                "key_code": "tab",
+                                "modifiers": [
+                                    "left_control", "shift"
+                                ]
+                            }],
+                            "type": "basic"
                         }]
                     }
                 ]
