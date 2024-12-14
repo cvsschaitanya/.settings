@@ -5,7 +5,23 @@ getTarget() {
     eval echo "$header"
 }
 
-for set in `ls theSettings/*`
+
+#!/bin/bash
+
+# Get the operating system
+os_type=$(uname)
+
+if [[ "$os_type" == "Darwin" ]]; then
+    echo "This is macOS."
+    sourcePath="theSettings/macos"
+elif [[ "$os_type" == "Linux" ]]; then
+    echo "This is Linux."
+    sourcePath="theSettings/linux"
+else
+    echo "Unknown OS."
+fi
+
+for set in `ls $sourcePath/*`
 do
     target=`getTarget $set`
     
@@ -13,6 +29,7 @@ do
         mv $target /tmp/`basename $target`.`date +%s`
     fi
     
-    ln -s `realpath $set` $target
+    echo cp `realpath $set` $target
+    cp `realpath $set` $target
 done
 
