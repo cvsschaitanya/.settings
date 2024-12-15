@@ -155,6 +155,26 @@
                         }]
                     },
                     {
+                        "description": "Simulate Windows + L to lockj screen",
+                        "manipulators": [{
+                            "from": {
+                                "key_code": "L",
+                                "modifiers": {
+                                    "mandatory": [
+                                        "left_control"
+                                    ]
+                                }
+                            },
+                            "to": [{
+                                "key_code": "Q",
+                                "modifiers": [
+                                    "left_command", "left_control"
+                                ]
+                            }],
+                            "type": "basic"
+                        }]
+                    },
+                    {
                         "description": "Remap Cmd+Tab to Ctrl+Tab for browser tab switching",
                         "manipulators": [{
                             "from": {
