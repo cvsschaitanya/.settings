@@ -4,6 +4,8 @@
 # pane (does not execute it). N=1 is the most recent match.
 set -euo pipefail
 
+export PATH="/opt/homebrew/bin:$PATH"
+
 pane="$1"
 n="$2"
 regex="$3"
