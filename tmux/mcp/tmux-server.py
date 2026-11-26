@@ -30,7 +30,8 @@ from mcp.server import Server
 from mcp.types import Tool, TextContent
 
 logging.basicConfig(
-    level=logging.INFO,
+    # stderr lines show as errors in Cursor's MCP list, so routine INFO stays off by default.
+    level=os.environ.get("MCP_LOG_LEVEL", "WARNING"),
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 logger = logging.getLogger("tmux_mcp_server")
